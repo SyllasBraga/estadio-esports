@@ -1,0 +1,244 @@
+*{
+    text-decoration: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-image: linear-gradient(180deg, #2D3895 50%, rgba(27, 25, 25, 0.055) 170%);
+    background-size: 150vh 150vh;
+}
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgba(32, 25, 117, 1);
+    width: 100%;
+    height: 11%;
+}
+
+.menu{
+    width: 22%;
+    height: 100%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.menu-hamburguer{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.trace{
+    width: 70px;
+    height: 5px;
+    position: absolute;
+    background-color: black;
+    transition: transform .3s;
+}
+.trace:nth-child(1){
+    top: 20px;
+    transform: rotate(0);
+}
+
+.trace:nth-child(2){
+    top: 40px;
+    transform: rotate(0);
+}
+
+.trace:nth-child(3){
+    top: 60px;
+    transform: rotate(0);
+}
+#toogle{
+    display: none;
+}
+
+#toogle:checked + .menu-hamburguer #trace1{ 
+    transform: rotate(45deg);
+    top: 47px;
+}
+
+#toogle:checked + .menu-hamburguer #trace2{ 
+    transform: translateX(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#toogle:checked + .menu-hamburguer #trace3{ 
+    transform: rotate(-45deg);
+    top: 47px;
+}
+
+.page-title{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.arena-name{
+    width: 90%;
+    margin-right: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+}
+main{
+    width: 100%;
+    max-height: max-content;
+    margin-bottom: 3%;
+}
+.container-menu{
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    height: 40%;
+    margin-top: 7%;
+}
+
+.side-bar{
+    width: 50%;
+    height: 100%;
+    background: #201975;
+    font-weight: 400;
+    font-size: 30px;
+    color: white;
+    align-items: center;
+    text-align: center;
+    padding-top: 10%;
+    margin-left: 4%;
+}
+.side-bar .item-menu a{
+    text-decoration: none;
+    color: white;
+}
+
+.side-bar .item-menu a:hover{
+    color: black;
+}
+.side-bar .item-menu{
+    margin: 10%;
+    cursor: pointer;
+}
+.side-bar .item-menu:hover{
+    color: black;
+}
+.menu-itens{
+    display: none;
+    width: 50%;
+    height: 80%;
+    margin-left: 0;
+    background: #201975;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    align-items: center;
+    text-align: center;
+    padding-top: 5%;
+    border: black solid 1px;
+}
+.menu-itens .item, h2{
+    margin-top: 1%;
+}
+.menu-itens .item a{
+    text-decoration: none;
+    color: white;
+}
+.menu-itens .item a:hover{
+    color: black;
+}
+
+.menu-itens h2{
+    color: black;
+}
+
+.msg-wellcome{
+    width: 90%;
+    height: 5%;
+    padding-left: 5%;
+    margin-top: 3%;
+    text-align: left;
+    color: white;
+}
+.section-evts{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+    align-items: center;
+    justify-content: center;
+}
+.evts-info{
+    display: flex;
+    width: 100%;
+    text-align: left;
+    color: black;
+}
+.container-evts{
+    background-color: transparent;
+    width: 50%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.card-evt{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(67, 67, 67, 1);
+    width: 30%;
+    max-height: 100%;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    transition: transform 1s;
+}
+
+.card-evt:hover{
+    transform: scale(1.5);
+}
+.card-evt .evt-name{
+    text-align: center;
+}
+
+.card-evt .evt-infos{
+    margin-left: 10%;
+}
+
+.arrow{
+    font-size: 10vh;
+    cursor: pointer;
+}
+
+.arrow:hover{
+    color: white;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+

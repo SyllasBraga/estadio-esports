@@ -1,0 +1,66 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-lista{
+    width: 70%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #434343;
+}
+
+.table{
+    width: 80%;
+    height: 50vh;
+    border: 1px solid black;
+}
+.table th, td{
+    border: 1px solid black;
+    table-layout: fixed;
+    text-align: center;
+    font-weight: bold;
+}
+
+.table td{
+    cursor: pointer;
+}
+.table .tr-content:hover{
+    background-color: dimgray;
+}
+
+.table th{
+    color: white;
+}
+
+.btn-actions{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center ;
+    text-decoration: none;
+
+}
+
+.btn-actions .btn{
+    width: 30%;
+    height: 30%;
+    margin: 5%;
+    background-color: whitesmoke;
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+}
+
+.btn-actions .btn:hover{
+    background-color: #434343;
+}
+
+.btn-actions .btn a{
+    text-decoration: none;
+    color: black;
+}
