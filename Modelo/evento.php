@@ -9,10 +9,12 @@
         private $dataTermino;
         private $jogo;
         private $criador;
+        private $codEvt;
 
-        public function __construct($nome, $exclusivo, $premiacao, 
+        public function __construct($codEvt, $nome, $exclusivo, $premiacao, 
         $dataInicio, $dataTermino, $jogo, $criador) 
         {
+            $this->codEvt = $codEvt;
             $this->nome = $nome;
             $this->exclusivo = $exclusivo;
             $this->premiacao = $premiacao;
@@ -77,7 +79,14 @@
         {
             $this->criador = $criador;
         }
-
+        public function getCodEvt()
+        {
+            return $this->codEvt;
+        }
+        public function setCodEvt($codEvt)
+        {
+            $this->codEvt = $codEvt;
+        }
     }
     
 

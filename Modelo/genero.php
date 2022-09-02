@@ -2,8 +2,9 @@
     class genero{
         private $nomeGen;
         private $codGen;
-        public function __construct($nomeGen) {
+        public function __construct($codGen, $nomeGen) {
             $this->nomeGen= $nomeGen;
+            $this->codGen = $codGen;
         } 
         public function getCodGen()
         {

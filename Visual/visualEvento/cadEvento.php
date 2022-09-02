@@ -33,6 +33,7 @@
             $adm = filter_input(INPUT_POST, 'adm');
 
             $evt = new evento(
+                null,
                 $nomeEvt,
                 $exclusivo,
                 $premiacao,

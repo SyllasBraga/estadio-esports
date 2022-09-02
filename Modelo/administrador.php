@@ -4,8 +4,10 @@ class administrador
     private $nome;
     private $salario;
     private $idade;
-    public function __construct($nome, $salario, $idade)
+    private $codAdm;
+    public function __construct($codAdm, $nome, $salario, $idade)
     {
+        $this->codAdm = $codAdm;
         $this->nome = $nome;
         $this->salario = $salario;
         $this->idade = $idade;
@@ -33,5 +35,13 @@ class administrador
     public function setIdade($idade)
     {
         $this->idade = $idade;
+    }
+    public function getCodAdm()
+    {
+        return $this->codAdm;
+    }
+    public function setCodAdm($codAdm)
+    {
+        $this->codAdm = $codAdm;
     }
 }

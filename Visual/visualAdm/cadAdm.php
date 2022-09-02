@@ -25,7 +25,7 @@
             $idade = filter_input(INPUT_POST, 'idade');
             $salario = filter_input(INPUT_POST, 'salario');
 
-            $adm = new administrador($nomeAdm, $idade, $salario);
+            $adm = new administrador(null, $nomeAdm, $salario, $idade);
             $daoAdm = new daoAdministrador();
             if ($daoAdm->inclui($adm)) {
                 echo '<h2>Cadastro realizado com sucesso!</h2>';

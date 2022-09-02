@@ -22,7 +22,7 @@
 
             $nome = filter_input(INPUT_POST, 'nome');
 
-            $genero = new genero($nome);
+            $genero = new genero(null, $nome);
             $daoGen = new daoGenero();
             if ($daoGen->inclui($genero)) {
                 echo '<h2>Cadastro realizado com sucesso!</h2>';

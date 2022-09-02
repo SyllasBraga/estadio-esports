@@ -6,9 +6,11 @@ class Jogo
     private $cod_plataforma;
     private $cod_gen;
     private $nome_jogo;
+    private $codJogo;
 
-    public function __construct( $nome_jogo, $cod_plataforma, 
+    public function __construct($codJogo, $nome_jogo, $cod_plataforma, 
     $cod_gen, $cod_adm) {
+        $this->codJogo = $codJogo;
         $this->cod_adm = $cod_adm;
         $this->cod_plataforma = $cod_plataforma;
         $this->cod_gen = $cod_gen;
@@ -45,6 +47,14 @@ class Jogo
     public function setNomeJogo($nome_jogo)
     {
         $this->nome_jogo = $nome_jogo;
+    }
+    public function getCodJogo()
+    {
+        return $this->codJogo;
+    }
+    public function setCodJogo($codJogo)
+    {
+        $this->codJogo = $codJogo;
     }
 
 }

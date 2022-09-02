@@ -25,7 +25,7 @@
             $genero = filter_input(INPUT_POST, 'genero');
             $adm = filter_input(INPUT_POST, 'adm');
 
-            $jg = new jogo($nome, $plataforma, $genero, $adm);
+            $jg = new jogo(null,$nome, $plataforma, $genero, $adm);
             $dao = new daoJogo();
             if ($dao->inclui($jg)) {
                 echo '<h2>Cadastro realizado com sucesso!</h2>';

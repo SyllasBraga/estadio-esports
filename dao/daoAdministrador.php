@@ -23,6 +23,30 @@ class daoAdministrador
             return false;
         }
     }
+    public function delete($id)
+    {
+        $sql = "delete from Administrador where cod_adm = $id";
+        $pst = Conexao::getPreparededStatement($sql);
+        if ($pst->execute()) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public function update(Administrador $administrador)
+    {
+        $sql = 'update administrador set nome_adm = ?,idade=?,salario=? where cod_adm=?';
+        $pst = Conexao::getPreparededStatement($sql);
+        $pst->bindValue(1, $administrador->getNome());
+        $pst->bindValue(2, $administrador->getIdade());
+        $pst->bindValue(3, $administrador->getSalario());
+        $pst->bindValue(4, $administrador->getCodAdm());
+        if ($pst->execute()) {
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
 
 ?>

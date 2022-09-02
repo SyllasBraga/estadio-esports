@@ -22,7 +22,7 @@
 
             $nome = filter_input(INPUT_POST, 'nome');
 
-            $plataforma = new plataforma($nome);
+            $plataforma = new plataforma(null,$nome);
             $daoPlataforma = new daoPlataforma();
             if ($daoPlataforma->inclui($plataforma)) {
                 echo '<h2>Cadastro realizado com sucesso!</h2>';

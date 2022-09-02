@@ -35,7 +35,34 @@ class daoJogo
         } else {
             return false;
         }
-    }       
+    }
+    public function delete($id)
+    {
+        $sql = "delete from jogo where cod_jogo=$id";
+        $pst = conexao::getPreparededStatement($sql);
+
+        if ($pst->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function update(Jogo $jogo)
+    {
+        $sql = 'update jogo set cod_adm=?, cod_plataforma=?, cod_gen=?, nome_jogo=? where cod_jogo=?';
+        $pst = conexao::getPreparededStatement($sql);
+        $pst->bindValue(1, $jogo->getCodAdm());
+        $pst->bindValue(2, $jogo->getCodPlataforma());
+        $pst->bindValue(3, $jogo->getCodGen());
+        $pst->bindValue(4, $jogo->getNomeJogo());
+        $pst->bindValue(5, $jogo->getCodJogo());
+        if ($pst->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
 
 ?>

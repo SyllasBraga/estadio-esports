@@ -2,7 +2,8 @@
     class plataforma{
         private $codPlataforma;
         private $nomePlataforma;
-        public function __construct($nomePlataforma) {
+        public function __construct($codPlataforma, $nomePlataforma) {
+            $this->codPlataforma = $codPlataforma;
             $this->nomePlataforma = $nomePlataforma;
         }
         public function getCodPlataforma()
