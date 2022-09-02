@@ -18,6 +18,7 @@
             <?php
 
             require_once '../../dao/daoAdministrador.php';
+            require_once '../../Modelo/administrador.php';
             require_once '../../dao/conexao.php';
 
             $nomeAdm = filter_input(INPUT_POST, 'nome');

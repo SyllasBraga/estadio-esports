@@ -15,7 +15,7 @@
     include_once("../assets/components/main.php"); ?>
     <main>
         <div class="card-cadastro">
-            <form class="form-cadastro" action="cadAdm.php">
+            <form class="form-cadastro" action="cadAdm.php"  method="POST">
                 <h2>Cadastro de administradores</h2>
                 <div class="card-lbl">
                     <label class="lbl-item" for="nome">Nome:</label>

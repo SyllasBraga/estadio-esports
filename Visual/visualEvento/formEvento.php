@@ -15,19 +15,21 @@
     include_once("../assets/components/main.php"); ?>
     <main>
         <div class="card-cadastro">
-            <form class="form-cadastro" action="cadEvento.php">
+            <form class="form-cadastro" action="cadEvento.php" method="POST">
                 <h2>Cadastro de eventos</h2>
                 <div class="card-lbl">
                     <label class="lbl-item" for="nomeEVT">Nome do evento:</label>
                     <input class="ipt-text" type="text" name="nomeEVT" id="nomeEVT" required>
                 </div>
                 <div class="card-lbl">
-                    <label class="lbl-item" for="dataINICIO">Início do evento:</label>
+                    <label class="lbl-item" for="dataINICIO" for='dataINICIO_HORA'>Início do evento:</label>
                     <input class="ipt-text" type="date" name="dataINICIO" id="dataINICIO" required>
+                    <input class="ipt-text" type="time" name="dataINICIO_HORA" id = "dataINICIO_HORA" required>
                 </div>
                 <div class="card-lbl">
-                    <label class="lbl-item" for="dataFIM">Fim do evento:</label>
-                    <input class="ipt-text" type="date" name="dataFIM" id="dataFIM" required>
+                    <label class="lbl-item" for="dataFIM" for="dataFIM_HORA">Fim do evento:</label>
+                    <input class="ipt-text" type="date" name="dataFIM" id="dataFIM" pattern="\d{4}-\d{2}-\d{2}" required>
+                    <input class="ipt-text" type="time" name="dataFIM_HORA" id = "dataFIM_HORA" pattern="\d{2}:\d{2}:\d{2}" required>
                 </div>
                 <div class="card-lbl">
                     <label class="lbl-item" for="exclusivo">Exclusivo da arena: </label>

@@ -7,8 +7,8 @@ class Jogo
     private $cod_gen;
     private $nome_jogo;
 
-    public function __construct($cod_adm, $cod_plataforma, 
-    $cod_gen, $nome_jogo) {
+    public function __construct( $nome_jogo, $cod_plataforma, 
+    $cod_gen, $cod_adm) {
         $this->cod_adm = $cod_adm;
         $this->cod_plataforma = $cod_plataforma;
         $this->cod_gen = $cod_gen;

@@ -15,6 +15,7 @@
     include_once("../assets/components/main.php"); ?>
     <main>
         <div class="card-lista">
+            <h2>Listagem de gêneros</h2>
             <table class="table">
                 <tr>
                     <th>Código: </th>

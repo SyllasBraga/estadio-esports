@@ -20,5 +20,16 @@ class daoGenero
             return false;
         }
     }
+
+    public function delete($id)
+    {
+        $sql = "delete from genero where cod_gen = $id";
+        $pst = Conexao::getPreparedStatement($sql);
+        if ($pst->execute()) {
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
 ?>
