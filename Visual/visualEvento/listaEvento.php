@@ -41,10 +41,14 @@
                     echo '<td>' . $linha['nome_evt'] . '</td>';
                     echo '<td>' . $linha['duracaoINICIO'] . '</td>';
                     echo '<td>' . $linha['duracaoFIM'] . '</td>';
-                    echo '<td>' . $linha['premiacao'] . '</td>';
-                    echo '<td>' . $linha['exclusivo_arena'] . '</td>';
-                    echo '<td>' . $linha['cod_jogo'] . '</td>';
-                    echo '<td>' . $linha['cod_adm'] . '</td>';
+                    echo '<td>R$' . $linha['premiacao'] . '</td>';
+                    if ($linha['exclusivo_arena']==0) {
+                        echo '<td>Não</td>';
+                    }else{
+                        echo '<td>Sim</td>';
+                    }
+                    echo '<td>' . $linha['nome_jogo'] . '</td>';
+                    echo '<td>' . $linha['nome_adm'] . '</td>';
                     echo '</tr>';
                 }
                 ?>

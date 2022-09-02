@@ -5,7 +5,9 @@
         public function listaTodos()
         {
             $lista = [];
-            $pst = Conexao::getPreparededStatement('select * from evento');
+            $pst = Conexao::getPreparededStatement('select e.cod_evt, e.nome_evt, e.duracaoINICIO, e.duracaoFIM, e.premiacao, e.exclusivo_arena, j.nome_jogo, a.nome_adm
+            from evento e inner join administrador a on e.cod_adm = a.cod_adm
+            inner join jogo j on e.cod_jogo = j.cod_jogo order by e.cod_evt ASC;');
             $pst ->execute();
             $lista = $pst->fetchAll(PDO::FETCH_ASSOC);
             return $lista;

@@ -28,8 +28,8 @@
                 </div>
                 <div class="card-lbl">
                     <label class="lbl-item" for="dataFIM" for="dataFIM_HORA">Fim do evento:</label>
-                    <input class="ipt-text" type="date" name="dataFIM" id="dataFIM" pattern="\d{4}-\d{2}-\d{2}" required>
-                    <input class="ipt-text" type="time" name="dataFIM_HORA" id = "dataFIM_HORA" pattern="\d{2}:\d{2}:\d{2}" required>
+                    <input class="ipt-text" type="date" name="dataFIM" id="dataFIM" required>
+                    <input class="ipt-text" type="time" name="dataFIM_HORA" id = "dataFIM_HORA" required>
                 </div>
                 <div class="card-lbl">
                     <label class="lbl-item" for="exclusivo">Exclusivo da arena: </label>
@@ -38,6 +38,10 @@
                         <option value="1">Sim</option>
                         <option value="0">Não</option>
                     </select>
+                </div>
+                <div class="card-lbl">
+                    <label class="lbl-item" for="premiacao">Premiacao(R$):</label>
+                    <input class="ipt-text" type="text" name="premiacao" id="premiacao" required>
                 </div>
                 <div class="card-lbl">
                     <label class="lbl-item" for="jogo">Jogo: </label>

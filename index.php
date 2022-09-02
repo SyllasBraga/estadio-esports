@@ -71,7 +71,7 @@
                     echo '</div>';
                     echo '<div class="evt-infos">';
                     echo '<p>Data: '. $linha['duracaoINICIO'] .'</p>';
-                    echo '<p>Jogo: ' .$linha['cod_jogo'] . '</p>';
+                    echo '<p>Jogo: ' .$linha['nome_jogo'] . '</p>';
                     echo '<p>Premiação: R$'.$linha['premiacao'] .'</p>';
                     echo '</div>';
                     echo '</div>';

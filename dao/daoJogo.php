@@ -9,7 +9,8 @@ class daoJogo
         g.nome_gen, a.nome_adm from jogo j 
         inner join plataforma p on j.cod_plataforma = p.cod_plataforma 
         inner join genero g on j.cod_gen = g.cod_gen 
-        inner join Administrador a on a.cod_adm = j.cod_adm;');
+        inner join Administrador a on a.cod_adm = j.cod_adm
+        order by j.cod_jogo ASC;');
         $pst->execute();
         $lista = $pst->fetchAll(PDO::FETCH_ASSOC);
         return $lista;
