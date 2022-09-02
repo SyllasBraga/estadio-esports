@@ -1,7 +1,12 @@
 <?php
     require_once './conexao.php';
     require_once './daoGenero.php';
+    require_once '../Modelo/genero.php';
     
-    daoGenero::delete(5)
+    $dao = new daoGenero();
+
+    $dao->update(1, 'FPS');
+
+
 
 ?>

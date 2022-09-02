@@ -23,9 +23,23 @@ class daoGenero
 
     public function delete($id)
     {
-        $sql = "delete from genero where cod_gen = $id";
+        $sql = "delete from genero where cod_gen = '$id'" ;
         $pst = Conexao::getPreparedStatement($sql);
         if ($pst->execute()) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function update($id, $newName)
+    {
+        $sql = 'update genero set nome_gen = ?
+        where cod_gen= ?';
+        $pst = Conexao::getPreparededStatement($sql);
+        $pst->bindValue(1, $id);
+        $pst->bindValue(2, $newName);
+        if ($pst->execute()){
             return true;
         }else{
             return false;
