@@ -6,7 +6,8 @@ main{
 
 .card-lista{
     width: 70%;
-    height: 70vh;
+    min-height: 70VH;
+    MAX-height: 150vh;
     display: flex;
     flex-direction: column;
     align-items: center;
