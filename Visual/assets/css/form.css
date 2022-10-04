@@ -71,4 +71,10 @@ main{
 }
 
 
-
+@media screen and (max-width: 720px) {
+    .card-cadastro{
+        width: 80%;
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+}

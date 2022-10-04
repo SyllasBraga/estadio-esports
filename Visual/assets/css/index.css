@@ -176,6 +176,18 @@ footer{
     justify-content: center;
 }
 
+@media screen and (max-width: 720px)  {
+    .arena-name{
+        padding: 0;
+        margin: 0;
+    }
+
+    .container-menu{
+        margin-top: 28%;
+        width: 90%;
+        font-size:small;
+    }
+}
 
 
 
